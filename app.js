@@ -57,7 +57,7 @@ function agregarAmigo () { /*function agregarAmigo() { ... }: Se define una func
         mostrarListaAmigo ();
 
         limpiarCaja();
-        
+
         console.log (amigos);
     }
 
@@ -98,4 +98,12 @@ function sortearAmigo() {
     let resultadoHTML = document.querySelector("#resultado");
     resultadoHTML.innerHTML = `<li>¡El amigo secreto es: ${amigoSecreto}!</li>`;
   }
+}
+
+// Reinicia el juego a su estado inicial.
+function reiniciarJuego() {
+    amigos = [];
+    amigo.value = '';
+    document.getElementById('listaAmigos').innerHTML = '';
+    document.getElementById('resultado').innerHTML = '';
 }
