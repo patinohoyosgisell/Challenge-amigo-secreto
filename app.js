@@ -1,15 +1,6 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica
 //  para resolver el problema.
 
-/*
-const listaAmigos = [];
-const ulListaAmigos=document.getElementById("listaAmigos");
-
-function agregarAmigo() {
-    listaAmigos.push(inputAmigo.value);
-}
-    */
-
 
 /* lista donde se mostraran los amigos */
 let amigos = []; //  Aquí se declara una variable llamada amigos y se inicializa como un array vacío. Este array se utilizará para almacenar los nombres de los amigos que se vayan agregando.
@@ -29,4 +20,9 @@ function agregarAmigo () { //function agregarAmigo() { ... }: Se define una func
     amigos.push(amigo);
 
     }
+}
+
+function listaAmigos () { // Se define una función llamada listaAmigos. Esta función se encargará de actualizar el contenido de un elemento HTML específico con una lista de amigos.
+    let listaAmigos =document.getElementById("listaAmigos"); //Dentro de la función, se obtiene una referencia al elemento HTML con el ID "listaAmigos". Se asume que este elemento es un contenedor (por ejemplo, un <div> o un <ul>) donde se mostrará la lista de amigos.
+    listaAmigos.innerHTML = ""; //Esta línea establece el contenido HTML dentro del elemento listaAmigos como una cadena vacía (""). Esto significa que cualquier contenido que estuviera previamente dentro de ese elemento será eliminado.
 }
