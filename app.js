@@ -9,7 +9,7 @@ function agregarAmigo () { /*function agregarAmigo() { ... }: Se define una func
     se obtiene una referencia al elemento HTML con el ID "amigo". Se asume que este elemento es un campo de entrada de 
     texto (<input type="text">) donde el usuario ingresará el nombre del amigo.*/
     
-    let amigo = inputAmigo.value; /*let amigo = inputAmigo.value;: Se obtiene el valor (el nombre del amigo) que el usuario ha ingresado 
+    let amigo = inputAmigo.value.trim(); /*let amigo = inputAmigo.value;: Se obtiene el valor (el nombre del amigo) que el usuario ha ingresado 
     en el campo de entrada y se almacena en la variable amigo.*/
 
     inputAmigo.addEventListener('input',function(){ /*Aquí, se está agregando un "escuchador de eventos" al elemento inputAmigo. Este escuchador está atento al evento 
