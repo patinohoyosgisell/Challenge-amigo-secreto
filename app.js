@@ -19,13 +19,18 @@ function agregarAmigo () {
         alert ("Por favor, ingresa el nombre de un amigo");
         return; } 
     
-    //Evitar duplicados    
-    if(amigos.includes(amigo)){
+        
+    //Formatear: primera letra mayúscula, resto minúscula
+    amigo=amigo.charAt(0).toUpperCase() + amigo.slice(1).toLowerCase();
+
+    //Evitar duplicados (ignorando mayúsculas/minúsculas)
+    let existe = amigos.some(nombre => nombre.toLowerCase() === amigo.toLowerCase());
+    if (existe) {
         alert('El nombre ya está en la lista');
         return;
         } 
    
-        amigos.push(amigo);
+        amigos.push(amigo);// se guarda ya formateado
         
         mostrarListaAmigo ();
 
